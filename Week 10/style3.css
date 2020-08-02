@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+font-family: monotype corsiva;
+}
+ul li{
+    list-style: none;
+}
+.nav{
+
+    height: 120px;
+    background-color: ;
+    width: 100%;
+    display:flex;
+ border-bottom: 2px solid red;
+
+}
+.logo img{
+    height: 100px;
+    width:150px;
+    margin: 20px 0 px 50px;
+    position: absolute;left:10px;top:10px;
+
+}
+.menu{
+    justify-self:left ;
+    
+
+}
+.menu ul{
+   display: flex;
+   list-style: none;
+  
+   
+}
+
+.menu ul li{
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 15px;
+    padding:10px 25px;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;left:880px;
+}
+.menu ul li:hover{
+    background-color: aqua;
+    
+    }
+a{
+    text-decoration: none;
+
+}
+
+.text{
+    font-family: cursive;
+    position: absolute;
+    top: 80px;
+    right: 35px;
+    font-size: 20px;
+}
+
+.main{
+    padding: 85px 0 0 150px  ;
+    
+}
+.cards{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.name{
+    color:purple;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 22px;
+}
+.main h2{font-family:cursive;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.card{margin:25px 50px 20px 0  ;
+    height: 320px;
+    width: 600px;
+    background-color: rgb(240, 240, 240);
+    position: relative;
+}
+.image{
+    height: 100px;
+    width: 150px;
+
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    margin-right: 20px;
+    margin-top: 10px;
+    float: left;
+}
+.fanta{
+    top:32px;
+    left: 30px;
+
+}
+.card_content{
+    font-size: 20px;
+    position: relative;
+    left: 230px;
+    top: 30px;
+    width: 300px;
+}
+.card:hover{
+    
+    box-shadow: -3px 2px 3px gray;
+}
+.foot{
+    padding-top: 50px;
+   padding-left: 30px;
+    border-top: 2px solid black;
+    
+    display: flex;
+}
+.foot_body{
+padding: 35px 0 0 50px;
+
+}
+.left{
+    font-family: cursive;
+    color: red;
+    font-size: 18px;
+    padding: 0 0 70px 20px;
+    border-right: 2px solid black;
+    height: 100%;
+    width: 200px;
+    line-height: 35px;
+
+    
+}
+.left a{
+    color:red;
+    text-decoration: none;
+}
+.middle{
+    color: green;
+    font-family: cursive;
+    font-size: 18px;
+ margin-left: 30px;
+    border-right: 2px solid black;
+    padding-bottom: 82px;
+    width: 500px;
+    height: 100%;
+
+}
+.right{
+    margin-left: 35px;
+
+}
+.map{
+   float: left;
+    margin:0 35px ;
+}
+.contact{
+    font-family: cursive;
+    font-weight: bold;
+    color:blue;
+    font-size: 20px;
+  line-height: 35px;
+   float: left;
+    width: 200px;
+}

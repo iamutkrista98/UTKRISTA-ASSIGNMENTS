@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    background-color: #FFFFCD;
+    width: 785px;
+    height: 500px;
+    box-shadow: 1px 1px 8px gray;
+}
+.container{
+border: 1px solid black;
+    position: absolute;
+    height: 98%;
+    width: 98%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+ 
+}
+
+.column{
+    background-color: white;
+    height: 60px;
+    width: 250px;
+    padding: 20px;
+    margin: 4px;
+    border: 1px solid black;
+text-align: center;
+font-weight:bold;
+}
+.b{
+position: absolute;
+left:254px ;
+top: 0;
+}
+.c{
+    position: absolute;
+    left:508px ;
+    top: 0;
+    }
+
+.blue1{
+ position: relative;
+    width: 250px;
+    height: 416px;
+background-color: #ADD8E6;
+}
+.yellow{
+    position: absolute;
+    left:254px ;
+    top:  64px;
+    text-align: right; 
+font-weight:bold;
+    background-color: yellow;
+}
+.red{
+    position: absolute;
+    left:508px ;
+    top:  64px; 
+    text-align: center;
+font-weight:bold;
+    background-color: red;
+}
+.green1{
+
+    position: absolute;
+    left:254px ;
+    top:  128px;
+    height:352px ;
+    width: 504px;
+font-weight:bold;
+    z-index: 999; 
+    background-color: rgb(10, 109, 43);
+}
+.blue1,.green1{
+    border: 1px solid black;
+    margin: 4px;
+}
+.data{
+    position: relative;
+    top: 40px;
+    left: 20px;
+}
+.lists{
+    position: relative;
+    top: 20px;
+    left: 50px;
+    line-height: 35px;
+}
