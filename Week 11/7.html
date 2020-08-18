@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Table</title>
+	<style type="text/css">
+		th{
+			font-weight: bold;
+			color: white;
+		}
+		table{
+			font-family: Arial;
+		}
+		tr.D{
+			background-color: #cedce1;
+		}
+		tr.L{
+			background-color: #e8eef1;
+		}
+		tr{
+			height: 50px;
+		}
+		td{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<table width="100%">
+		<tr bgcolor="#3891a7">
+			<th>S.N.</th>
+			<th>Name</th>
+			<th>Image</th>
+		</tr>
+	<script type="text/javascript">
+		var bg="L";
+		for(i=1;i<=4;i++){
+			if(i%2==0){
+				bg="L";
+			}else{
+				bg="D";
+			}
+			document.write("<tr class=\""+bg+"\"><td>"+i+"</td><td>Name "+i+"</td><td><img src=\""+i+".jpg\" alt=\" Image "+i+".jpg\" width=\"50\"></td></tr>");
+		}
+	</script>
+	</table>
+</body>
+</html>
