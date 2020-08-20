@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        *{
+            overflow: hidden;
+        }
+        .container{
+            margin: 20px;
+        }
+        
+        .datas{
+           position: absolute;
+           left: -10px;
+           width: 200px;
+           height: 100%;
+        }
+        ul li{
+            list-style: none;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type ="text " placeholder="Anything" id = "input_value"><br><br>
+        <button id = "add_btn">Add</button>
+        <button id ="display">Display </button><br><br>
+       <div class="datas">
+        <ul class="containerb"></ul>
+       </div>
+    </div>
+   
+    <script>
+        var array = [];
+        var add = document.getElementById("add_btn");
+        var display = document.querySelector("#display");
+        var input = document.getElementById("input_value");
+       var container_b = document.querySelector(".containerb");
+        var  i =0;
+
+        add.addEventListener("click",add_data);
+display.addEventListener("click",display_data);
+function add_data(){
+
+array[i] = input.value;
+input.value="";
+console.log(i);
+i = i +1;
+        }
+
+        function display_data(){
+
+            container_b.innerHTML ="<hr/>";    
+for( var i = 0; i < array.length ; i ++ ){
+    var display_value = document.createElement("li");
+    console.log(array[i])
+display_value.innerHTML ="Element " + i + " = " + array[i];
+container_b.appendChild(display_value);
+        }
+
+        }
+    </script>
+</body>
+</html>
