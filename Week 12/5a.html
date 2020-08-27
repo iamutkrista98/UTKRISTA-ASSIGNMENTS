@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 5a</title>
+	<script type="text/javascript">
+		function validate()
+
+		{
+		  if(isNaN(document.f1.txtinput.value))
+		  {
+		  	alert("It is not a number");
+		  	return false;
+		  }
+		  else
+		  {
+		  	alert('It is a number');
+		  	return true;
+		  }
+
+
+
+         }
+	</script>
+</head>
+<body>
+	<form name="f1" onsubmit="return validate();">
+	<input type="text" name="txtinput">Enter a value to check
+	<button type="submit">Submit</button>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 2</title>
+</head>
+
+<body>
+<script type="text/javascript">
+  function changeTxt(t,o){
+    var o = document.getElementById(o);
+   o.innerHTML = t; //Will change the text within the H1 tag to whatever you supply in the first argument, 't'.
+   o.style.color = "#F00"; //This will change the color of the new text to RED.
+  }
+</script>
+<h1 id="anH1tag">This is some text.</h1>
+<div id="thisIsAclickableDiv" onclick="changeTxt('This is DIFFERENT text.','anH1tag');">Click here to change</div><br>
+<br>
+<h2>Exercise 2b</h2>
+
+<button type="button"
+onclick="document.getElementById('date').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="date"></p>
+</body>
+</html>
