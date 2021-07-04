@@ -1,0 +1,1650 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body
+{
+  font-family : 'Poppins', sans-serif;
+  background-color: rgba(253, 253, 253, 0.95);
+}
+/* --------------------------------RELTAINABLE ELEMENTS-----------------------
+COMPONENTS THAT ARE COMMON TO ALL THE WEBPAGES TAKING THE INDEX/HOME PAGE AS REFERENCE*/
+.heading{
+  font-size:30px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  margin:0px auto;
+}
+#topbar{
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  color: white;
+  background-color: rgba(0,0,0,0.95);
+  z-index: 10;
+  overflow: hidden;
+
+}
+#topbar h4{
+  font-size: 16px;
+  float: left;
+  padding: 1vh;
+  font-weight: lighter;
+}
+#topbar a{
+  font-size: 16px;
+  color: yellow;
+  font-weight: lighter;
+}
+#topbar a:hover{
+  color: red;
+}
+#topbar i{
+  font-size: 16px;
+  padding: 1vh;
+  color: yellow;
+  float: right;
+  font-weight: lighter;
+}
+#topbar i:hover{
+  color: red;
+}
+
+#navbar nav{
+  background: rgba(0, 130, 230, 0.95);
+  width: 100%;
+  top:40px;
+  position: fixed;
+  z-index:1000000;
+  overflow: hidden;
+}
+#navbar .logo img{
+  width: 120px;
+  height:120px;
+  padding: 5px;
+  float: left;
+}
+#navbar nav ul{
+  float:right;
+}
+#navbar nav ul li{
+  display: inline-block;
+  line-height: 100px;
+  margin: 0 20px;
+
+}
+#navbar nav ul li a{
+  color:black;
+  font-size:20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#navbar nav ul li a.active{
+  text-decoration:underline;
+  text-decoration-color: yellow;
+}
+#navbar nav a:hover{
+  text-decoration: underline;
+  text-decoration-color: white;
+  transition:0.4s;
+}
+.search{
+  float:right;
+  margin-right: 10px;
+  position: relative;
+  top:30px;
+  overflow: hidden;
+}
+.search input[type=text]{
+  width:220px;
+  height:40px;
+  padding:3px;
+  border-radius:5px;
+  font-weight:lighter;
+  border:none;
+}
+   
+.search button{
+  background-color:indigo;
+  color: white;
+  float: right;
+  margin-left: 5px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 50%;
+  border:none;
+  cursor: pointer;
+}
+.search button:hover{
+  background-color: black;
+  transition: 0.5s;
+  border:none;
+}
+.search i{
+  color:white;
+}
+@media (max-width:1200px){
+  .search{
+    display: none;
+  }
+}
+.checkbtn{
+  color:white;
+  float: right;
+  line-height: 100px;
+  margin-right:15px;
+  cursor:pointer;
+  display: none;
+}
+.checkbtn i{
+  font-size: 25px;
+  color: white;
+}
+#check{
+  display: none;
+
+}
+.margin{
+  margin:0px auto;
+}
+.parallax{
+  background: url(images/banner3.jpg) repeat fixed 100%;
+  margin:0 auto;
+  background-position: center;
+  background-size: cover;
+}
+.parallax-inner{
+  padding-top: 220px;
+  padding-bottom: 100px;
+  overflow: auto;
+}
+/*TESTIMONIALS OR WHAT OUR CUSTOMERS SAY SECTION AVAILABLE ON THE INDEX/HOME PAGE AND ABOUT US SECTION*/
+.testim{
+  width: 100%;
+  position: relative;
+  top:400px;
+  margin:100px auto;
+  margin-bottom: 0px;
+  transform: translateY(-50%);
+}
+.testim .wrap{
+  position: relative;
+  width: 90%;
+  padding: 20px 20px;
+  margin: 40px auto;
+}
+.testim .arrow{
+  display: block;
+  position: absolute;
+  color: #eee;
+  cursor: pointer;
+  font-size: 2.2em;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .3s ease-in-out;
+  padding: 0px;
+}
+.testim .arrow:before{
+  cursor: pointer;
+}
+.testim .arrow.left{
+  left: 10px;
+}
+.testim .arrow.right{
+  right: 10px;
+}
+.testim .arrow:hover{
+  color: royalblue;
+}
+.testim .dots{
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 60px;
+  left: 0;
+  display: block;
+  height: 12px;
+}
+.testim .dots .dot{
+  list-style-type: none;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  margin: 5px 10px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  position: relative;
+}
+.testim .dots .dot.active,
+.testim .dots .dot:hover{
+  background-color: royalblue;
+  border-color: black;
+}
+
+.testim .dots .dot.active{
+  animation: testim-scale .5s ease-in-out forwards;
+}
+.testim .cont{
+  position: relative;
+  overflow: hidden;
+}
+.testim .cont > div{
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 0 70px 0;
+  opacity: 0;
+}
+.testim .cont > div.inactive{
+  opacity: 1;
+}
+.testim .cont > div.active{
+   
+  position: relative;
+  opacity: 1;
+   
+}
+.testim .cont div .img img{
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.testim .cont div h2{
+  color: royalblue;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+.testim .cont div p{
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.testim .cont div.active .img img{
+  animation: testim-show .5s ease-in-out forwards;
+}
+.testim .cont div.active h2{
+  animation: testim-content-in .4s ease-in-out forwards;
+}
+.testim .cont div.active p {
+  animation: testim-content-in .5s ease-in-out forwards;
+}
+.testim .cont div.inactive .img img{
+  animation: testim-hide .5s ease-in-out forwards;
+}
+.testim .cont div.inactive h2{
+  animation: testim-content-out .4s ease-in-out forwards;
+}
+.testim .cont div.inactive p {
+  animation: testim-content-out .5s ease-in-out forwards;
+}
+
+@keyframes testim-scale {
+  0% {
+      box-shadow: 0px 0px 0px 0px #eee;
+  }
+  35% {
+      box-shadow: 0px 0px 10px 5px #eee;
+  }
+  70% {
+      box-shadow: 0px 0px 10px 5px #ea830e;
+  }
+  100% {
+      box-shadow: 0px 0px 0px 0px #ea830e;
+  }
+}
+
+@keyframes testim-content-in {
+  from {
+      opacity: 0;
+      transform: translateY(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes testim-content-out {
+  from {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+}
+@keyframes testim-show {
+  from {
+      opacity: 0;
+      transform: scale(0);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+@keyframes testim-hide {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(0);
+  }
+}
+
+/*MAP SECTION COMMON TO ALL THE PAGES*/
+.map iframe {
+  position: relative;
+  top:180px;
+  width : 100%;
+  height: 500px;
+  border:none;
+}
+/*SITEMAP OR IMPORTANT LINKS SECTION COMMON TO ALL THE PAGES*/
+#sitemap{
+  position: relative;
+  width: 100%;
+  display: block;
+  top:180px;
+  height:460px;
+  padding: 5px;
+  background-color: rgba(0, 130, 230, 0.95);
+}
+
+#sitemap .links h2{
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+#sitemap .links a{
+  text-decoration: none;
+  color:black;
+  font-size: 20px;
+  margin:0 auto;
+}
+#sitemap .links a:hover{
+  transition: 0.2s;
+  color: white;
+  z-index: 0;
+}
+#sitemap .links ul li a.active{
+  color:white;
+}
+#sitemap .centre{
+  text-align: center;
+  display: block;
+}
+#sitemap .centre h4{
+  position: relative;
+  top:-310px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+#sitemap .centre h5 i{
+  color:black;
+  font-size:20px;
+  position: relative;
+  top:-290px;
+  padding: 2px;
+}
+#sitemap .centre img{
+  width:140px;
+  height: 140px;
+  position: relative;
+  top:100px;
+}
+#sitemap .bottom{
+  font-size:18px;
+  position: relative;
+  top:50px;
+}
+#sitemap .right{
+  float: right;
+  justify-content: right;
+  position: relative;
+  top:-400px;
+}
+#sitemap .right h2{
+  font-size: 20px;
+  font-weight: 300;
+}
+#sitemap .right h3{
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 50px;
+  color: black;
+}
+#sitemap .right h3 i{
+  color: black;
+}
+#sitemap .right a{
+  color:black;
+  margin-right: 30px;
+  font-weight: lighter;
+}
+#sitemap .right h3 a:hover{
+  color:white;
+  transition: 0.2s;
+}
+.home a i{
+  position: relative;
+  top:210px;
+  font-size: 30px;
+  float: right;
+}
+.email a i{
+  font-size: 30px;
+  float: left;
+  color:black;
+  position: relative;
+  top:220px;
+}
+.up a i{
+  font-size: 30px;
+  position: relative;
+  float:right;
+  right: 20px;
+  top:150px;
+}
+.home a i:hover {
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, white 0px 0px 0px 3px;
+  transition: 0.2s;
+}
+.email a i:hover{
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, white 0px 0px 0px 3px;
+  transition: 0.2s;
+
+}
+.up a i:hover{
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, white 0px 0px 0px 3px;
+  transition: 0.2s;
+}
+
+/*FOOTER SECTION THAT IS COMMON ON ALL PAGES*/ 
+#footer{
+  background-color: rgba(0,0,0,0.9);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#footer h5{
+  font-size:16px;
+  color: white;
+  font-weight: 300;
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+
+/*SECTION WHERE ALL THE ARTICLES CONTENT GOES*/
+#container{
+  max-width: 100%;
+  margin:0 auto;
+  position: relative;
+  top:160px;
+  overflow: auto;
+}
+.row{
+  display: flex;
+  position: relative;
+  padding: 15px;
+  
+}
+.column{
+  flex-basis: 90%;
+  height: 500px;
+  margin:0 auto;
+
+  
+}
+.column h2{
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+  padding: 0px;
+  text-align: center;
+  justify-content: center;
+  margin:0 auto;
+  background: rgba(0, 0, 0, 0.75);
+}
+.column p{
+  line-height: 60px;
+  font-weight: 300;
+  width: 100%;
+  font-size: 30px;
+  padding: 20px;
+  color: yellow;
+  text-align: justify;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+}
+.column p:hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+.column .btn {
+  background:linear-gradient(to right, rgba(0, 130, 230, 0.95),rgba(75, 0, 130, 0.95));
+  color: white;
+  padding:1em;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  margin:20px auto;
+  width: 300px;
+
+}
+.column .btn:hover{
+  cursor:pointer;
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+/*PARTNER BRANDS SECTION COMMON TO ALL THE PAGES*/
+.brands{
+  width: 95%;
+  display: flex;
+  margin:80px auto;
+  margin-bottom: 0px;
+  flex-wrap: wrap;
+}
+.brands .row{
+  width: 95%;
+  gap:20%;
+  margin:0px auto;
+}
+.col-3 img{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+.col-3 img:hover{
+  filter:grayscale(0);
+  transition: 0.2s;
+}
+
+/*PIRATECORP WEBSITE PAGE 2
+IT LISTS ALL THE FEATURED PRODUCTS AVAILABLE IN CARD FORMAT
+WITH THE SPECIFICATIONS AND PRODUCT IMAGE*/
+
+/*PRODUCT LINEUP PAGE STYLING ELEMENTS */
+#product{
+  display: flex;
+  width: 95%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin:0px auto;
+  gap:20px;
+}
+#product a{
+  text-decoration: none;
+}
+.cards{
+  width: 400px;
+  margin: 30px auto;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  transition: .4s;
+}
+.cards:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  transform:translate(0px,-8px);
+  transition: 0.5s;
+}
+#product img{
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+#product img:hover{
+  transform: scale(1.2);
+  transition:0.5s ;
+  overflow: auto;
+}
+#product ol,li{
+  text-align: justify;
+  font-size: 16px;
+  justify-content: space-evenly;
+  font-weight: 300;
+  padding: 3px;
+}
+#product h3{
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+#product h6{
+  font-size:22px;
+  font-weight: 500;
+  text-align: center;
+  color: #222f3e;
+}
+#product ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#product ul li{
+  padding:2px;
+}
+#product .fa{
+  color:black;
+  font-size: 16px;
+  transition:0.4s;
+}
+#product .fa:hover{
+  transform: scale(1.3);
+  color:royalblue;
+  transition: 0.3s;
+}
+#product button{
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  width: 100%;
+  padding: 0.5em;
+  border:0px;
+  outline: none;
+  cursor: pointer;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-transform: uppercase;
+
+}
+.buy{
+  background:linear-gradient(to right, rgba(0, 130, 230, 0.95),rgba(75, 0, 130, 0.95));
+}
+.buy:hover{
+  
+  background: black;
+  transition: 0.4s;
+}
+
+/*DESKTOP BUILD STYLING ELEMENTS UNDER PRODUCT PAGE SECTION
+WHICH CONSISTS OF A FORM THAT ALLOWS USER TO SELECT DIFFERENT COMPONENTS
+THAT GOES INTO MAKING A DESKTOP OF THEIR CHOICE*/
+#build-desktop{
+  width: 100%;
+  margin:0 auto;
+}
+#build-desktop .build-header p{
+  width: 90%;
+  background: linear-gradient(315deg, rgba(117, 59, 189, 0.9) 0%, rgba(27, 141, 201, 0.9) 67.21%, rgba(30, 166, 222, 1) 100%);
+  margin:30px auto;
+  margin-bottom: 0px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 30px;
+  border-radius: 10px;
+  border:none;
+  line-height: 40px;
+  text-align: justify;
+  justify-content: space-evenly;
+
+}
+#build-desktop .customdesign{
+  width: 90%;
+  margin: 0px auto;
+  border-radius: 10px;
+  padding: 10px;
+  background: url(images/design.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+#build-desktop .customdesign .buildform{
+  padding: 5px;
+  background:rgba(0, 0, 0, 0.25);
+}
+#build-desktop .customdesign .buildform >label{
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+#build-desktop .customdesign .buildform select{
+  font-size: 16px;
+  font-weight: 300;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  height: 35px;
+
+}
+#build-desktop .customdesign .buildform input{
+  font-size: 14px;
+  padding: 5px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  height: 40px;
+  border-radius: 5px;
+  border:none;
+}
+#build-desktop .customdesign .buildform .btn{
+  width: 130px;
+  font-weight: 500;;
+  color:white;
+  background:linear-gradient(to right, rgba(0, 130, 230, 0.90),rgba(75, 0, 130, 0.90));
+  border-radius: 10px;
+}
+#build-desktop .customdesign .buildform .btn:hover{
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+
+/*PIRATECORP WEBSITE PAGE-3 NAMED MISC
+WHERE IMAGES ARE LAID OUT IN GRID FORMAT*/
+/*ACCESSORIES AND IMAGE GALLERY PAGE STYLING ELEMENTS*/
+.accessories{
+  display: flex;
+  width: 95%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin:70px auto;
+  gap:20px;
+}
+.accessories a{
+  text-decoration: none;
+}
+.accessories .cards{
+  margin: 0px auto;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  transition: .4s;
+}
+.accessories .cards:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  transform:translate(0px,-8px);
+  transition: 0.5s;
+}
+.accessories img{
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.accessories img:hover{
+  transform: scale(1.1);
+  transition:0.5s ;
+  overflow: auto;
+}
+.accessories ol,li{
+  text-align: justify;
+  font-size: 14px;
+  justify-content: space-evenly;
+  font-weight: 300;
+  padding: 3px;
+}
+.accessories h3{
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.accessories h6{
+  font-size:22px;
+  font-weight: 500;
+  text-align: center;
+  color: #222f3e;
+}
+.accessories ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accessories ul li{
+  padding:5px;
+}
+.accessories .fa{
+  color:black;
+  font-size: 16px;
+  transition:0.4s;
+}
+.accessories .fa:hover{
+  color:royalblue;
+}
+.accessories button{
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  width: 100%;
+  padding: 0.5em;
+  border:0px;
+  outline: none;
+  cursor: pointer;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+.gallery-container{
+  display: grid;
+  width: 92%;
+  margin:20px auto;
+  margin-bottom: 0px;
+  grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+}
+
+.gallery-item{
+  padding: 10px;
+}
+.gallery-item img{
+  width: 100%;
+  border-radius: 10px;
+}
+.gallery-item img:hover{
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+/*PIRATECORP WEBSITE PAGE -4 NAMED ABOUT US 
+WHERE THE MISSION STATEMENT IS PROVIDED WITH OUR TEAM SECTION
+DISPLAYED IN THE FORM OF CARDS*/
+
+/*ABOUT US PAGE STYLING ELEMENTS*/
+#aboutus{
+  background: linear-gradient(315deg, rgba(117, 59, 189, 0.95) 0%, rgba(27, 141, 201, 0.9) 67.21%, rgba(30, 166, 222, 1) 100%);
+
+}
+#aboutus p{
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 300;
+  padding-left:5%;
+  padding-right: 5%;
+  text-align: justify;
+  justify-content: space-between;
+}
+#aboutus ul li{
+  text-align: justify;
+  font-size: 18px;
+  padding-left: 5%;
+  padding-right: 5%;
+  line-height: 35px;
+  font-weight: 300;
+}
+.aboutusimage{
+  display: block;
+  text-align: center;
+}
+.aboutusimage img{
+  width: 200px;
+  padding:1em;
+  margin-bottom:-100px;
+  
+}
+.teamheading{
+  font-size: 28px;
+  font-weight: lighter;
+  text-align: center;
+  position: relative;
+  margin-top: 100px;
+  text-transform: uppercase;
+}
+#ourteam{
+  width: 95%;
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:15px;
+}
+.teamcard{
+  position: relative;
+  width: 280px;
+  margin: 40px auto;
+  box-shadow: 0 3px 5px #000;
+  border-radius: 10px;
+  text-align: center;
+}
+.teamcard:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: 0.4s;
+}
+.teamcard .bg-image img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  clip-path: polygon(0 0,100% 0%,100% 70%,45% 100%,0 70%);
+}
+.teamcard a,.teamcard h3{
+  color:black;
+  font-weight: 300;
+  font-size: 16px;
+}
+.teamcard span{
+  font-weight: 500;
+  font-size: 16px;
+}
+.teamcard .pic img{
+  height: 130px;
+  width: 130px;
+  border-radius:50%;
+}
+
+
+/*PIRATECORP WEBSITE PAGE-5 NAMED CONTACT US WHERE
+THE LOCATION DETAILS AND SUPPORT DETAILS ARE PROVIDED
+ALONG WITH A FORM TO GET IN TOUCH WITH SUPPORT ASKING 
+QUERIES THE CUSTOMER MIGHT HAVE*/
+
+/*CONTACT US PAGE STYLING ELEMENTS*/
+.contact{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(images/query.png)repeat fixed 100%;
+  background-size: contain;
+  background-position: center;
+  background-position-y: 120px;
+
+
+}
+.contact img{
+  z-index: -3;
+}
+.contact .content{
+  text-align: center;
+
+}
+.contactp{
+  background-color: rgba(0, 0, 0, 0.95);
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  color:#fff;
+}
+.wrapper{
+  width: 90%;
+  display: flex;
+  margin:100px auto;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.contactForm{
+  background-color: #fff;
+}
+.wrapper .contactInfo{
+  width: 100%;
+  margin:0px auto;
+  display: flex;
+  flex-direction: column;
+
+}
+.wrapper .contactInfo .box{
+  position: relative;
+  padding: 20px 20px 20px 20px;
+  display: flex;
+}
+.wrapper .contactInfo .box .icon{
+  min-width:50px;
+  height: 50px;
+  background:grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.wrapper .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 18px;
+  color:#fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+.wrapper .contactInfo .box .text h3{
+  font-weight: 500;
+  color: #00bcd4;
+}
+.contactForm{
+  width:50%;
+  padding: 30px;
+  margin:0px auto;
+  opacity: 0.9;
+  z-index: 2;
+  border-radius: 10px;
+}
+.contactForm h2{
+  font-size: 30px;
+  color:#333;
+  font-weight: 500;
+}
+.contactForm .inputBox{
+  position: relative;
+  margin-top:10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+  width: 100%;
+  padding:5px 0;
+  font-size: 16px;
+  margin:10px 0;
+  border:none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding:5px 0;
+  font-size: 16px;
+  margin:10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color:#666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span{
+  color:#e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+
+}
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+  color:#e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+
+}
+.contactForm .inputBox input[type="submit"]
+{
+  width: 120px;
+  background:linear-gradient(to right, rgba(0, 130, 230, 0.95),rgba(75, 0, 130, 0.95));
+  color: #fff;
+  border:none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+
+
+}
+.contactForm .inputBox input[type="submit"]:hover{
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+/*PIRATECORP WEBSITE-PAGE 5.1 INDICATED WITH A USER ICON AT THE TOPBAR
+THAT CONTAINS A LOGIN AND REGISTRATION FORM*/
+
+/*LOGIN AND REGISTRATION PAGE STYLING ELEMENTS*/
+.hero{
+  width: 100%;
+  min-height: 650px;
+  background:url(images/bg.jpg)repeat fixed 100%;
+  background-position: center;
+  background-size: cover;
+}
+.hero .form-box{
+  width:380px;
+  opacity: 0.9;
+  height: 550px;
+  position: relative;
+  top:30px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background:#fff;
+  padding: 15px;
+  overflow: hidden;
+}
+.hero .form-box .button-box{
+  width: 220px;
+  margin:0px auto;
+  position: relative;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.hero .form-box .button-box .toggle-btn{
+  padding: 10px 30px;
+  cursor: pointer;
+  background:transparent;
+  border:0;
+  outline: none;
+  position:relative;
+  color: white;
+  font-size: 15px;
+}
+.hero #btncolor{
+  top:0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background:linear-gradient(to right, rgba(0, 130, 230, 0.95),rgba(75, 0, 130, 0.95));
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.hero .social-icons{
+  margin:30px auto;
+  text-align: center;
+}
+.hero .social-icons i{
+  font-size: 30px;
+  color: black;
+  margin:0 12px;
+  cursor: pointer;
+}
+.hero .input-group{
+  top:180px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+.hero .input-field{
+  width: 100%;
+  padding: 0px 0 10px;
+  margin: 10px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top:0;
+  font-size: 16px;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background:transparent;
+}
+.hero .submit-btn{
+  width: 150px;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  color:white;
+  font-size: 18px;
+  background:linear-gradient(to right, rgba(0, 130, 230, 0.95),rgba(75, 0, 130, 0.95));
+  border:0;
+  outline: none;
+  border-radius: 10px;
+}
+.hero .submit-btn:hover{
+  background: rgba(0,0,0,0.90);
+}
+.hero .check-box{
+  margin:30px 10px 30px 0;
+}
+.hero span{
+  color:#777;
+  font-size: 14px;
+  bottom:65px;
+  position: absolute;
+}
+.hero #login{
+  left: 50px;
+}
+.hero #register{
+  left:450px;
+}
+
+
+
+/*SECTION FOR THE RESPONSIVE DESIGN WHICH IS TRIGGERED WHEN THE WIDTH OF THE SCREEN CORRESPONDS TO 
+A DEVICE WITH MAXIMUM WIDTH OF 900PX AND MIN-WIDTH of 320px THE ELEMENTS THAT ARE NOT LISTED UNDER THE MEDIA QUERY IS 
+INHERITED FROM ABOVE RESPECTIVELY APPLYING THE SAME STYLING LISTED ABOVE ACCORDINGLY...
+ONLY THE ELEMENTS THAT POSE UNUSUAL BEHAVIOUR OF OVERFLOWING AND CONTENT THAT GO HAYWIRE WHILE VIEWING
+ON DIFFERENT SCREEN ARE LISTED WITH STYLING THAT CAN PROPERLY ACCOMODATE THOSE CHANGES*/
+
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 900px) {
+  .heading{
+    font-size:20px;
+  }
+  #topbar{
+    opacity: 1;
+  }
+  #topbar h4{
+    font-size: 14px;
+  }
+  #navbar nav{
+    opacity: 1;
+  }
+  .search{
+    display: none;
+  }
+  .checkbtn{
+    display: block;
+  }
+  #navbar .logo img{
+    height: 80px;
+    width: 80px;
+    padding:5px;
+    margin:10px auto;
+  }
+  #navbar nav ul{
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,0,0,0.95);
+    left: -100%;
+    top:140px;
+    text-align: center;
+    transition: all .5s;
+  }
+  #navbar nav ul li{
+    display: grid;
+    text-align: center;
+    margin: 50px auto;
+    line-height: 0px;
+  }
+  #navbar nav ul li a{
+    font-size: 16px;
+    font-weight: 300;
+    color:white;
+  }
+  #navbar nav ul li a:hover{
+    transition: 0.5s;
+    color: white;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  .parallax{
+    background:url(images/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .parallax-inner{
+    padding-top: 200px;
+    padding-bottom: 100px;
+    overflow: hidden;
+  }
+  .column{
+    flex-basis: 100%;
+
+  }
+  .column h2{
+    font-size: 24px;
+  }
+ 
+  .column p{
+    font-size: 20px;
+    line-height: 30px;
+    opacity: 1;
+  }
+  .column .btn{
+    font-size: 16px;
+    margin:20px auto;
+
+  }
+  #container{
+    top:140px;
+  }
+  .brands{
+    margin:30px auto;
+    margin-bottom: 0px;
+  }
+
+  /*SITEMAP SECTION MEDIA QUERIES*/
+  #sitemap{
+    height: 300px;
+    overflow: hidden;
+  }
+  #sitemap .links{
+    padding:0px;
+    float:left;
+  }
+ 
+  #sitemap .links h2{
+    font-size: 14px;
+    position: relative;
+  }
+  #sitemap .links ul li a{
+    font-size: 12px;
+    line-height: 30px;
+    float: left;
+  }
+  #sitemap .centre{
+    width: 50%;
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin:0 auto;
+  }
+  #sitemap .centre img{
+    width: 70px;
+    position: relative;
+    top:210px;
+    height:70px;
+  }
+  #sitemap .centre h4{
+    font-size: 10px;
+    position: relative;
+    top:100px;
+  }
+  #sitemap .centre h5 i{
+    font-size: 10px;
+    top:100px;
+
+  }
+  #sitemap .bottom{
+    font-size: 10px;
+    top:162px;
+  }
+  #sitemap .right{
+    float:right;
+    position: relative;
+    top:-110px;
+    
+  }
+  #sitemap .right h2{
+    float: right;
+    position: relative;
+    top:-28px;
+    left:-100px;
+    font-weight: 300;
+    font-size: 14px;
+
+  }
+  #sitemap .right h3 i{
+    font-size: 10px;
+  }
+  #sitemap .right h3{
+    font-size: 10px;
+    line-height: 30px;
+    padding: 0.1em;
+    position: relative;
+    left:30px;
+  }
+  .email a i{
+    font-size: 20px;
+    top:100px;
+    float: right;
+    right: 50px;
+
+  }
+  .home a i{
+    font-size: 20px;
+    top:80px;
+  }
+  .up a i{
+    font-size: 20px;
+    top:50px;
+    left: -5px;
+  }
+  .testim{
+    margin:0px auto;
+    margin-bottom: 0px;
+  }
+  .testim .arrow{
+    font-size: 1.5rem;
+  }
+  .testim .cont div h2{
+    font-size:14px;
+  }
+  .testim .cont div p{
+    line-height: 20px;
+    font-size: 10px;
+  }
+  /*FOOTER SECTION MEDIA QUERY*/
+  #footer{
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    top:180px;
+  }
+  #footer h5{
+    font-size:8px;
+    padding: 0px;
+    overflow: hidden;
+
+  }
+
+
+  /*PRODUCT PAGE MEDIA QUERY*/
+  #product{
+    width: 90%;
+    gap:10px;
+  }
+  #product .cards{
+    width: 380px;
+  }
+  #product h3{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+  } 
+  #product p,li{
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 300;
+    text-align: center;
+  }
+  #product h6{
+    font-size: 20px;
+  }
+  #product .fa{
+    font-size: 16px;
+  }
+  #product .buy{
+    font-size:18px;
+  }
+  #build-desktop .build-header p{
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+    width: 95%;
+  }
+  #build-desktop .customdesign{
+
+    width: 95%;
+    margin:0 auto;
+    padding: 5px;
+  }
+  #build-desktop .customdesign .buildform{
+    padding: 2px;
+    width: 100%;
+  }
+  #build-desktop .customdesign .buildform >label{
+    font-size: 14px;
+    padding: 2px;
+  }
+  #build-desktop .customdesign .buildform select{
+    font-size: 12px;
+    width: 100%;
+    height: 25px;
+    padding: 0px;
+  
+  }
+  #build-desktop .customdesign .buildform input{
+    font-size: 12px;
+    height: 25px;
+    padding: 2px;
+  }
+  #build-desktop .customdesign .buildform .btn{
+    width: 70px;
+    height: 20px;
+  }
+  /*ABOUT US PAGE MEDIA QUERIES*/
+  #aboutus{
+    width: 100%;
+    
+  }
+  #aboutus h1{
+    font-size: 20px;
+    font-weight: lighter;
+    
+  }
+  #aboutus p{
+    font-size:12px;
+    line-height: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: lighter;
+  }
+  #aboutus ul li{
+    font-size: 12px;
+    line-height: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #aboutus img{
+    height:140px;
+    width: 140px;
+    position: relative;
+    top:-20px;
+  }
+  #ourteam .teamcard{
+    margin:10px auto;
+  }
+
+  /*CONTACT PAGE MEDIA QUERIES*/
+
+  .contact{
+    margin: 0px auto;
+    background:url(images/query.png);
+    background-position:center;
+    background-size: cover;
+    z-index: 2;
+  }
+ 
+  .wrapper{
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin:0 auto;
+  }
+  .wrapper .contactInfo
+  {
+    width: 90%;
+  }
+  .wrapper .contactInfo .box .icon{
+    font-size: 18px;
+  }
+  .wrapper .contactInfo,.contactForm{
+    width: 90%;
+    margin: 20px auto;
+  }
+  .wrapper .contactInfo .box{
+    padding: 2px 2px 2px 2px;
+    margin-top:30px;
+  }
+  .wrapper .contactInfo .box .text{
+    font-size: 16px;
+    background-color:rgba(0, 0, 0, 0.95);  
+  }
+  
+  
+  /*LOGIN PAGE MEDIA QUERY*/
+  .hero{
+    background:url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+  }
+  .hero .form-box{
+    max-width: 90%;
+    top:50px;
+    
+  }
+  .hero .form-box .button-box{
+    margin:30px auto;
+  }
+  .hero .social-icons i{
+    font-size: 25px;
+  }
+  .hero .input-group{
+    top:180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+  }
+
+  .hero .submit-btn{
+    width: 50%;
+    margin-left: 40px;
+  }
+  .hero #login{
+    margin: 0 auto;
+  }
+  .hero #register{
+    margin: 0 auto;
+  }
+  /*MISC page media query*/
+  /*PRODUCT PAGE MEDIA QUERY*/
+  .accessories{
+    margin:20px auto;
+    width: 90%;
+    gap:30px;
+  }
+  .accessories h3{
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+  } 
+  .accessories p,li{
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 300;
+    text-align: center;
+  }
+  .accessories h6{
+    font-size: 16px;
+  }
+  .accessories .fa{
+    font-size: 14px;
+  }
+  .accessories .buy{
+    font-size:16px;
+  }
+
+}/*END OF MEDIA QUERY*/

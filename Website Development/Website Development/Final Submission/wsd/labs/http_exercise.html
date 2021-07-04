@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to HTTP and Security</title>
+</head>
+<body>
+    <header>
+        <h2>Utkrista Acharya, 77261056</h2>
+    </header>
+    1. What is the Hypertext Transfer Protocol (HTTP)?
+    <p>Hypertext Transfer Protocol is an application layer protocol which is used to transmit hypermedia documents such as HTML(Hyper Text Markup Language). It was designed with the purpose of communication between web browsers and web servers along with various other purposes. It tends to follow a classical client-server model.
+    whereby a client sends in a request and waits for a response from the server. 
+    </p>
+    <br>
+    <hr>
+    2. Why is HTTP called a stateless protocol?
+    <p>
+        HTTP is a stateless protocol because the server does not keep any data(state) between two requests.
+    </p>
+    <br>
+    <hr>
+    3. Describe the three phases of establishing a session using client-server protocols such as HTTP?
+    <p>
+        The three phases of establishing a session using client-server such as HTTP are as follows:</p>
+        <ul>
+            <li>The client establishes a TCP connection(or the appropriate connection if the transport layer is not TCP)</li>
+            <li>The client sends in request and waits for a response/answer</li>
+            <li>The server processes the request, sending back the answer along with a status code and appropriate data</li>
+        </ul>
+    <br>
+    <hr>
+    4. Describe the parameters on a get and post request?
+        <b>GET METHOD</b>
+        <p>
+            The get method is used to request data from a specified resource and a get request retrieves data from a web server by specifying parameters in the URL portion of the request which happens to be the main method used for static document retrieval.
+            An example of HTTP get request is given below: 
+            <b>GET</b> /home.html HTTP/1.1 
+            <b>User-Agent:</b> Mozzilla/4.0 (compatible; MSIE5.01; Windows NT) 
+            <b></b>
+        </p>
+            <b>POST METHOD</b>
+            <p>The HTTP POST method sends data to the server. The type of the body of the request is indicated by the Content-Type header.</p>
+    <br>
+    <hr>
+    5.What are the HTTP response status code and What do the HTTP status codes, 200, and 404 indicate?
+    <p>
+        HTTP response status code represents whether a specific HTTP request has been successfully completed or not.
+        The HTTP status code 200 represents that the request has succeded and the success however depends upon the method used.</p>
+        <ul>
+            <li><b>GET:</b>The resource has been fetched and is transmitted in the message body. </li>
+            <li><b>HEAD:</b> The representation headers are included in the response without any message body.</li>
+            <li><b>PUT OR POST:</b>The resource describing the result of the action is transmitted in the message body.</li>
+            <li><b>TRACE:</b>The message body contains the request message as received by the server.</li>
+        </ul>
+        The HTTP response status code 404 represents the server could not find the requested resource.  In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurrence on the web. 
+    <br>
+    <hr>
+    6.What are HTTP cookies? Give an example.
+    <p>
+        An HTTP cookie (web cookie or browser cookie) is a small piece of data that a server sends to the user's web browser. The browser may store it and send it back with later requests to the same server. Its typically used to tell if two requests came from the same browser or not. For example: for example. It remembers stateful information for the stateless HTTP protocol.
+    </p>
+    <br>
+    <hr>
+    7.Why are cookies a security issue?
+    <p>
+        Cookies are considered to be a security issue because: Information should be stored in cookies with the understanding that all cookie values are visible to, and can be changed by, the end-user. Depending on the application, it may be desirable to use an opaque identifier which is looked-up by the server or to investigate alternative authentication/confidentiality mechanisms such as JSON Web Tokens.
+    </p>
+    <br>
+    <hr>
+    8.Describe session hijacking and XSS.<br>
+        <b>Session Hijacking:</b>
+        <br>
+        <p>Session hijacking occurs when an attacker takes over a valid session between two computers. The attacker steals a valid session ID in order to break into the system and snoop data. Session hijacking consists of gaining access to and misusing a user's authenticated session. This may happen by stealing a cookie for an existing session, or by fooling the user (or their browser) into setting a cookie with a predetermined session ID.</p>
+        <b>XSS:</b><br>
+        <p>Cross-site scripting (XSS) is a security exploit which allows an attacker to inject into a website malicious client-side code. This code is executed by the victims and lets the attackers bypass access controls and impersonate users. </p>
+    <br>
+    <hr>
+    9.Describe Cross-site request forgery(CSRF)
+    <p>
+        Cros-site request forgery (CSRF) is an attack vector - tricks a web browser into executing an unwanted action in an application to which a user is logged in. A successfull CSRF attack devastates both of the business and user, which can consequentially in damaged client relationships, unauthorised fund transfers, changed passwords and data theft - including stolen session cookies.
+
+    </p>
+    <br>
+    <hr>
+    10.What are Cross-site HTTP requests (CORS) and what requests use CORS?
+    <p>
+        Cross-site HTTP requests are HTTP requests for resources from a different domain than the domain of the resource making the request. For instance, an HTML page from Domain A (http://domaina.example/) makes a request for an image on Domain B (http://domainb.foo/image.jpg) via the img element. Web pages today very commonly load cross-site resources, including CSS stylesheets, images, scripts, and other resources. CORS allows web developers to control how their site reacts to cross-site requests.
+
+    </p>
+    <br>
+    <hr>
+</body>
+</html>

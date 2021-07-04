@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="components/style/style.css">
+    <script src="components/javascript/script2.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Login And Signup</title>
+</head>
+<body>
+    <header>
+        <!--Topbar Section!-->
+        <div id="topbar">
+            <h4>Need Help? 01-4232232 | <a href="contactus.html">Contact</a></h4>
+            <a href="login.html"><i class="fas fa-user"></i></a>
+    
+        </div>
+        <!--Navigation Bar Section!-->
+        <div id="navbar"> 
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <div class="logo"><a href="index.html"><img src="components/images/logo.png" alt="company-logo"></a></div>
+                <div class="search">
+                    <form action="#">
+                        <input type="text"
+                            placeholder=" Search"
+                            name="search">
+                        <button>
+                            <i class="fa fa-search"
+                                style="font-size: 18px;">
+                            </i>
+                        </button>
+                    </form>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="gallery.html">Misc</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <!--Container Section Where All the main components are arranged!-->
+    <div id="container">
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btncolor"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+    
+                </div>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <form id="login" class="input-group" action="index.html" method="POST">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Login</button>
+    
+    
+                </form>
+                <form id="register" class="input-group" method="POST">
+                    <input type="text" class="input-field" placeholder="First Name" required>
+                    <input type="text" class="input-field" placeholder="Last Name" required>
+                    <input type="email" class="input-field" placeholder="Email-Id" required>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the licence terms and conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+    
+    
+                </form>
+    
+            </div>
+        </div>
+        <!--Popular Brands Section!-->
+        <div class="brands">
+			<div class="smallcontainer">
+				<h1 class="heading">Our Official Partner Brands</h1>
+				<div class="row">
+					<div class="col-3"><a href="https://rog.asus.com/" target="_blank"><img src="components/images/rog.png" title="rog" alt="rog-logo"></a></div>
+					<div class="col-3"><a href="https://www8.hp.com/us/en/home.html" target="_blank"><img src="components/images/hp.png" title="hp" alt="hp-logo"></a></div>
+					<div class="col-3"><a href="https://www.dell.com/" target="_blank"><img src="components/images/dell.png" title="dell" alt="dell-logo"></a></div>
+                </div>
+			</div>
+        </div>
+
+    </div>
+    <!--Sitemap And Important Links Section!-->
+
+    <section id="sitemap">
+        <div class="links">
+            <h2>Sitemap</h2>
+            <ul>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="gallery.html">Miscellanious</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+            <div class="email"><a href="mailto:piratecorp@gmail.com.np" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i></a></div>
+
+        </div>
+        <div class="centre">
+            <a href="components/images/logo.png" target="_blank"><img src="components/images/logo.png" alt="logo"></a>
+            <h4>We are available at</h4>
+            <h5><i class="fab fa-facebook-f"></i>&nbsp;&nbsp;<i class="fab fa-twitter"></i>&nbsp;&nbsp;<i class="fab fa-youtube"></i>&nbsp;&nbsp;<i class="fab fa-instagram"></i></h5>
+            <span class="bottom">Exceeding Expectations Since 2005</span>
+        </div>
+        <div class="right">
+            <h2>Support</h2>
+            <h3><i class="fa fa-map-marker" aria-hidden="true"></i> Banasthali, Balaju Kathmandu</h3>
+            <h3><a href="mailto:support@piratecorp.com.np?subject=Support&body=Message"><i class="fa fa-envelope" aria-hidden="true"></i> support@piratecorp.com.np</a></h3>
+            <h3><a href="tel:+9779860486984"><i class="fa fa-phone" aria-hidden="true"></i> +977 9860486984</a></h3>
+            <div class="up"><a href="#top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a></div>
+            <div class="home"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></div>
+        </div>
+    </section>
+    <!--Footer Element!-->
+
+    <section id="footer">
+        <h5>PIRATECORP PVT.LTD.(2021) || All Rights Reserved || Designed By Utkrista Acharya</h5>
+
+    </section>
+</body>
+</html>

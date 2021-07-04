@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Lab exercise html5</title>
+   <meta charset="utf-8" />
+   <meta name="author" content="your-name" />
+   <meta name="description" content="HTML5 lab exercises" />
+</head>
+<body>
+
+    <header>
+       <h2>Utkrista Acharya, Student_Id:77261056</h2>
+       <p>This page demonstrates some of the HTML5 structural elements</p>
+    </header>
+ 
+    <nav>
+       <ul>
+          <li><a href="html5-template.html" target="blank">HTML5 Template</a></li>
+          <li><a href="html5-structural-elements.html" target="blank">HTML5 Structural elements</a></li>
+          <li><a href="html5-validation.html" target="blank">HTML5 Validation</a></li>
+          <li><a href="html5-common-elements.html" target="blank">HTML5 Common Elements</a></li>
+       </ul>
+    </nav>
+ 
+    <section id="html-elements">
+       <h1>HTML5 Elements</h1>
+       
+       <section id="html5-structural-elements">
+          <h2>HTML5 Structural Elements</h2>
+          <p>HTML structural elements include: header, nav, section, 
+             article, aside, and footer</p>
+          <ul>
+             <li>
+                A header defines the header of a page or a page section
+             </li>
+             <li>
+                HTML5 introduced the nav to replace: div id="nav"
+             </li>
+             <li>
+                Element section is a grouped area of content
+             </li>
+           </ul>
+       </section>
+       
+       <section id="html5-common-elements">
+          <h2>HTML5 Common Elements</h2>
+          <ul>
+             <li><a href="https://developer.mozilla.org/" target="blank">Click here to go to the link</a></li>
+             <li><a href="html5-structural-elements.html#div-example" target="blank">Goto Division Elements Section Of the Documentation</a></li>
+             <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics" target="blank">MDN Inline Text Semantics Information</a></li>
+          </ul>
+          <section id="images">
+             <h3><b>Inserting Images in webpage</b></h3>
+            <figure>
+               <a href="images/star.png" target="blank"><img src="images/star.svg" alt="Example SVG image" /></a>
+               <img src="images/star.png" alt="Example PNG image" />
+               <figcaption>SVG and PNG format comparison.</figcaption>
+             </figure>
+          </section>
+          <section id="imagehyperlink">
+             <h3><b>Using Image As Hyperlinks</b></h3>
+            <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="blank">
+            <img src="images/star.svg" alt="Image formats" /> Read about image formats
+            </a>
+         </section>
+         <div id="div-example" class="highlight">
+            <h3><u>Division Elements<b></b></u></h3>
+            <p>Any number of element to be grouped into one division</p>
+         </div>
+         <h3><u>Span Elements<b></b></u></h3>
+         <p>The following is part of a paragraph <span class="highlight">wrapped in a span element</span> so that in can be selected.</p>
+         <h3><u>Block Quotes<b></b></u></h3>
+         <blockquote cite="http://developer.mozilla.org">
+            <p>This is a quotation taken from the Mozilla Developer Center.</p>
+         </blockquote>
+         <h3><u>Inline Quote<b></b></u></h3>
+         <p>In the new world of semantic markup, 
+            <q cite="http://ebbi.github.io">
+            Separation of content from how it is presented is key to modern web development.
+            </q>.
+         </p>
+         <form method="get" enctype="multipart/form-data" action="html5-validation.html">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+               <option>male</option>
+               <option>female</option>
+               <option>others</option>
+            </select>
+            <label for="email">Email: </label>
+            <input type="text" id="email" name="email" />
+         
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" />
+         
+            <button type="submit" value="submit">Sign in</button>
+            <h3><u><b>Form Widgets</b></u></h3>
+            <div id="Radiobuttons">
+               
+               <p>Choose your gender:
+                  <input type="radio" name="gender" value="m" checked="checked" /> Male
+                  <input type="radio" name="gender" value="f" /> Female
+                  <input type="radio" name="gender" value="o" /> Others
+               </p>
+               <p>Which is your hobby?
+                  <input type="radio" name="hobby" value="travel" /> Travel
+                  <input type="radio" name="hobby" value="food" /> Food
+                  <input type="radio" name="hobby" value="sky diving" /> Sky Diving
+                  <input type="radio" name="hobby" value="singing" /> Singing
+                  <input type="radio" name="hobby" value="dancing" /> Dancing
+               </p>
+            </div>
+            <div id="checkboxes">
+               <h3><u>Check Boxes<b></b></u></h3>
+               <p>What is your favourite colour(s):
+                  <input type="checkbox" name="red" value="true" checked="checked"/> Red
+                  <input type="checkbox" name="orange" value="true"/> Orange
+                  <input type="checkbox" name="violet" value="true" checked="checked"/> Violet
+                  <input type="checkbox" name="others" value="true"/> Others
+               </p>
+            </div>
+            <div id="filepicking">
+               <h3><u><b>File Uploading/Picking</b></u></h3>
+                  <p>
+                     <label for="fileupload">Please choose a file to upload: </label>
+                     <input type="file" id="fileupload" name="file1" />
+                  </p>
+            </div>
+            
+            
+            
+         </form>
+      
+
+
+         
+       </section>
+       
+       
+    </section>
+    
+    <footer>
+       &copy; no rights what so ever!
+    </footer>
+ 
+ </body>
+</html>
